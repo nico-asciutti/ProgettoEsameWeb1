@@ -34,9 +34,18 @@ p{
   text-align: center;
   color: #fff;
 }
-
-.column {
-  float: left;
-  width: 30%;
- margin-left: 25px;
+.column{
+    display: flex;
+    background-color: #0D6EFD;
+    margin: 50px 50px;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
 }
+
+.column img{
+  float: left;
+  width: auto;
+}
+
