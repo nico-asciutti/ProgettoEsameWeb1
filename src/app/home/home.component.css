@@ -49,3 +49,6 @@ p{
   width: auto;
 }
 
+.column p{
+  margin: 20px;
+}
