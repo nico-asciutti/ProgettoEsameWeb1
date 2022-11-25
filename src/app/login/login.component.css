@@ -1,0 +1,56 @@
+body {
+  width: auto;
+  font-family: Arial, Verdana, sans-serif;
+  background: url(src/assets/logo_varchetto.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+   
+   
+   h1{
+    text-align: center
+}
+   
+   
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   }
+   
+
+   @media screen and (max-width: 600px) {
+    .accedi {
+    width: 50%;
+    }
+   }
+   
+   
+   @media screen and (max-width: 600px) {
+    .accedi {
+    width: 100%;
+    }
+   }
+
+
+   h1.h1-customized {
+    padding-top: 20px;
+    color:#ffff;
+    font-size: 3em;
+    font-weight: 500;
+  }
+ 
+  .inset {
+    text-shadow: 1px 4px 6px grey, 0 0 0 #000, 1px 4px 6px grey
+  }
+  
+  small.col {
+    font-size:0.8em;
+    color:#333;
+  }
+
+  p{
+    text-align: center;
+    margin-left: 20px;
+    text-shadow: 1px 4px 6px grey, 0 0 0 black, 1px 4px 6px grey
+  }

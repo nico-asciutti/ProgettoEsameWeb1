@@ -1,0 +1,105 @@
+body {
+    width: auto;
+    font-family: Arial, Verdana, sans-serif;
+    background: url(src/assets/logo_varchetto.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+   
+p {
+    margin: 5%;
+}
+   
+   
+   h1{
+    text-align: center
+}
+   
+   
+    .column {
+        float: left;
+        width: 30%;
+       margin-left: 25px;
+    }
+   
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   }
+   
+
+   @media screen and (max-width: 600px) {
+    .column {
+    width: 50%;
+    }
+   }
+   
+   
+   @media screen and (max-width: 600px) {
+    .column {
+    width: 100%;
+    }
+   }
+
+
+   h1.h1-customized {
+    margin-top: 15px;
+    color:white;
+    font-size: 3em;
+    font-weight: 500;
+  }
+ 
+  .inset {
+    text-shadow: 1px 4px 6px grey, 0 0 0 #000, 1px 4px 6px grey
+    
+  }
+  small.col {
+    font-size:0.8em;
+    color:#333;
+  }
+
+  .antipasti{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: green;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+  }
+
+  .primi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+  }
+
+  .secondi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: red;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    filter: alpha(opacity=95);
+    opacity: 0.95;
+  }

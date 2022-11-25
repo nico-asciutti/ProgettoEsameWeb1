@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "progettoesameweb": {
+      "hosting": {
+        "ProgettoEsameWeb": [
+          "progettoesameweb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "progettoesameweb"
+  }
+}

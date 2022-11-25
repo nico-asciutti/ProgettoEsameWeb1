@@ -1,0 +1,80 @@
+<div class="container-fluid" >
+  <div class="row">
+      <div class = "card shadow"> 
+          <div class = "prenota">
+            <h1 class="h1-customized text-center inset">
+              Seleziona il tavolo
+            </h1>
+          </div>
+
+          <div class="seat-container" >
+            <div  *ngFor="let seatrow of seatmap " >
+                <div class="seatrow container">
+                    <div *ngIf="seatChartConfig?.showRowsLabel">
+                        <div class="row-label " > {{seatrow.seatRowLabel}} </div>
+                    </div>
+                    <div *ngFor="let seatobj of seatrow.seats">
+                        <div class="seat-item seat-space" style="color:white ; background-color:white" *ngIf="seatobj.seatLabel == ''">  &nbsp; </div>
+                        <div mat-tooltip class ="Seat : {{seatobj.seatLabel}}" placement="top"
+                        [ngClass]="{ 'seat-item' : true , 'seat-available' : seatobj.status == 'available' ,'seat-booked' : seatobj.status == 'booked' ,'seat-unavailable' : seatobj.status == 'unavailable' }" 
+                        (click)="selectSeat(seatobj)" *ngIf="(seatobj.status == 'available' || seatobj.status == 'booked' )&& seatobj.seatLabel != ''">{{seatobj.seatNo}}</div>
+                         
+                        <div mat-tooltip class="Seat not available" placement="top"
+                        [ngClass]="{ 'seat-item' : true , 'seat-unavailable' : true }" 
+                        *ngIf="seatobj.status == 'unavailable' && seatobj.seatLabel != ''">{{seatobj.seatNo}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <form class="form-group">
+            <label for="date">Data</label><br>
+            <input type="date" [(ngModel)]="data"  name="date"><br>
+            <br>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nome</label>
+              <input type="name" [(ngModel)]="nome" name = "nome">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Cognome</label>
+              <input type="name" [(ngModel)]="cognome" name = "cognome" >
+            </div> 
+            <div class="mb-3">
+              <label for="name" class="form-label">Orari</label>
+              <select [(ngModel)]="orari" name = "orari" class="orari">
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="19:30">19:30</option>
+                <option value="20:00">20:00</option>
+                <option value="20:30">20:30</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Persone</label>
+              <select [(ngModel)]="persone" name = "persone" class="persone">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <input type="name" [(ngModel)]="tavolo" name = "tavolo" class="tavolo" >
+            </div> 
+            <br>
+           <button (click)="addRecord()" [disabled]="!nome || !cognome || !tavolo || !data || !orari || !persone" class="btn btn-primary">Prenota</button>
+          </form>
+      </div>
+    </div>
+</div>
+
+
+

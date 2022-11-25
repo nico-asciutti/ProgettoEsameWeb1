@@ -1,0 +1,14 @@
+<div>
+    <div class="topnav">
+      <a class="active" routerLink="../home">Home</a>
+      <a routerLink="../menu">Menù</a>
+      <a routerLink="../dove-siamo">Dove siamo</a>
+      <a routerLink="../login" *ngIf="!_authService.loggedIn()" >Prenota</a>
+      <a routerLink="../prenota" class = "nav-link" *ngIf="_authService.loggedIn()">Prenota</a>
+      <a routerLink="../login" *ngIf = "!_authService.loggedIn()">Accedi</a>
+      <a class = "nav-link" *ngIf="_authService.loggedIn()" (click)="_authService.logout()">Logout</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+  
